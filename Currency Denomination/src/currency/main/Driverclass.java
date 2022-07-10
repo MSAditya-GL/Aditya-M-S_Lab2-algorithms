@@ -15,7 +15,7 @@ public class Driverclass {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the size of currency denominations");
 		int size = sc.nextInt();
-		if (size>0) {
+		if (size > 0) {
 			System.out.println("Enter the currency denomination value");
 			int[] notes = new int[size];
 			for (int i = 0; i < size; i++) {
@@ -26,10 +26,10 @@ public class Driverclass {
 			int amount = sc.nextInt();
 			currency.notesCountImplementation(notes, amount);
 			sc.close();
-		}else {
+		} else {
 			System.out.println("Enter the valid size of currency denominations");
 		}
-		
+
 	}
 
 }

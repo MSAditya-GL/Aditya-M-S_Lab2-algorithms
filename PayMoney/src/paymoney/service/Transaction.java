@@ -11,7 +11,7 @@ public class Transaction {
 		}
 		if (transactionSum >= target) {
 			System.out.println("Target is achieved after " + i + " transactions");
-		}else {
+		} else {
 			System.out.println("Given target is not achieved");
 		}
 	}
