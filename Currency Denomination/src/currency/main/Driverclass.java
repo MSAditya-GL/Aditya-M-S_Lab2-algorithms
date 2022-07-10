@@ -15,16 +15,21 @@ public class Driverclass {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the size of currency denominations");
 		int size = sc.nextInt();
-		System.out.println("Enter the currency denomination value");
-		int[] notes = new int[size];
-		for (int i = 0; i < size; i++) {
-			notes[i] = sc.nextInt();
+		if (size>0) {
+			System.out.println("Enter the currency denomination value");
+			int[] notes = new int[size];
+			for (int i = 0; i < size; i++) {
+				notes[i] = sc.nextInt();
+			}
+			mergesort.sort(notes, 0, notes.length - 1);
+			System.out.println("Enter the amount you want to pay");
+			int amount = sc.nextInt();
+			currency.notesCountImplementation(notes, amount);
+			sc.close();
+		}else {
+			System.out.println("Enter the valid size of currency denominations");
 		}
-		mergesort.sort(notes, 0, notes.length - 1);
-		System.out.println("Enter the amount you want to pay");
-		int amount = sc.nextInt();
-		currency.notesCountImplementation(notes, amount);
-		sc.close();
+		
 	}
 
 }
